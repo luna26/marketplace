@@ -4559,22 +4559,15 @@
           "80bb6744-3a7a-44a5-86d6-1ce0f5a6e967": {
             "type": "s_text",
             "settings": {
-              "announce_cnt": "Google Home Blutooth Speaker"
-            }
-          },
-          "b95915d0-2d12-42ce-a64a-4a3f3d03f388": {
-            "type": "s_text",
-            "settings": {
-              "announce_cnt": "Google Home Blutooth Speaker"
+              "announce_cnt": "Envío sin costo desde ₡25.000"
             }
           }
         },
         "block_order": [
-          "80bb6744-3a7a-44a5-86d6-1ce0f5a6e967",
-          "b95915d0-2d12-42ce-a64a-4a3f3d03f388"
+          "80bb6744-3a7a-44a5-86d6-1ce0f5a6e967"
         ],
         "settings": {
-          "enable_banner": false,
+          "enable_banner": true,
           "bg_clr": "#6453f7",
           "text_clr": "#ffffff"
         }
