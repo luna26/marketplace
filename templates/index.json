@@ -62,7 +62,7 @@
       ],
       "custom_css": [
         ".slider-content-wrap {left: 20px; max-width: 200px;}",
-        "@media (min-width: 769px) {.slider-content-wrap {max-width: 200px; }}"
+        "@media (min-width: 769px) {.slider-content-wrap {max-width: none; }}"
       ],
       "settings": {
         "slider_home_auto": true,
