@@ -360,62 +360,22 @@
     "1513236765628": {
       "type": "our_brand",
       "blocks": {
-        "1513236765628-0": {
-          "type": "brand_image",
-          "settings": {
-            "link": "#"
-          }
-        },
-        "1513236765628-1": {
-          "type": "brand_image",
-          "settings": {
-            "link": "#"
-          }
-        },
-        "1513236765628-2": {
-          "type": "brand_image",
-          "settings": {
-            "link": "#"
-          }
-        },
-        "1513236765628-3": {
-          "type": "brand_image",
-          "settings": {
-            "link": "#"
-          }
-        },
-        "1513238013377": {
-          "type": "brand_image",
-          "settings": {
-            "link": "#"
-          }
-        },
-        "1513238403251": {
-          "type": "brand_image",
-          "settings": {
-            "link": "#"
-          }
-        },
         "1513238453700": {
           "type": "brand_image",
           "settings": {
+            "image": "shopify://shop_images/elemar.avif",
             "link": "#"
           }
         },
         "1523515532537": {
           "type": "brand_image",
           "settings": {
+            "image": "shopify://shop_images/okstyle.jpg",
             "link": "#"
           }
         }
       },
       "block_order": [
-        "1513236765628-0",
-        "1513236765628-1",
-        "1513236765628-2",
-        "1513236765628-3",
-        "1513238013377",
-        "1513238403251",
         "1513238453700",
         "1523515532537"
       ],
@@ -423,7 +383,7 @@
         "product_col_desktop_pro": 6,
         "product_col_mobile_pro": 2,
         "addclass": "brands",
-        "title": "Manufacturers",
+        "title": "Tiendas",
         "bg": "rgba(0,0,0,0)"
       }
     },
