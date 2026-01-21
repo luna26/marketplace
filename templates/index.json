@@ -75,70 +75,6 @@
         "slide_button_txt_hover_color": "#ffffff"
       }
     },
-    "fa0ad9f1-7b58-4fd2-91ff-2fc9ddc6bdec": {
-      "type": "category-item",
-      "blocks": {
-        "template--14549507342436__fa0ad9f1-7b58-4fd2-91ff-2fc9ddc6bdec-text_block-1": {
-          "type": "text_block",
-          "settings": {
-            "title": "Computer & Laptop",
-            "collection": "electronicss"
-          }
-        },
-        "0514fc36-a904-4dc3-b69c-b3ad1577a853": {
-          "type": "text_block",
-          "settings": {
-            "title": "Mobile & Gadget",
-            "collection": "electronics1"
-          }
-        },
-        "6f3c2dee-0a2c-4bce-98f6-8997154df634": {
-          "type": "text_block",
-          "settings": {
-            "title": "Electronics",
-            "collection": "electronicss"
-          }
-        },
-        "35d52a32-61eb-4fba-917a-cea3e74a57d8": {
-          "type": "text_block",
-          "settings": {
-            "title": "Laptop & Acc",
-            "collection": "electronicss"
-          }
-        },
-        "0adba953-012c-4cfd-bb9a-1f401d42323c": {
-          "type": "text_block",
-          "settings": {
-            "title": "Game Laptop",
-            "collection": "electronics1"
-          }
-        },
-        "11df1249-ecdf-4dfd-bfc2-7a4ac4f00392": {
-          "type": "text_block",
-          "settings": {
-            "title": "Snap Camera",
-            "collection": "electronicss"
-          }
-        }
-      },
-      "block_order": [
-        "template--14549507342436__fa0ad9f1-7b58-4fd2-91ff-2fc9ddc6bdec-text_block-1",
-        "0514fc36-a904-4dc3-b69c-b3ad1577a853",
-        "6f3c2dee-0a2c-4bce-98f6-8997154df634",
-        "35d52a32-61eb-4fba-917a-cea3e74a57d8",
-        "0adba953-012c-4cfd-bb9a-1f401d42323c",
-        "11df1249-ecdf-4dfd-bfc2-7a4ac4f00392"
-      ],
-      "settings": {
-        "product_rows": true,
-        "product_col_desktop_pro": 6,
-        "product_col_mobile_pro": 1,
-        "type_bg": "#ffffff",
-        "type_bg_cate": "#f9d401",
-        "title_1": "",
-        "title_1_clr": "#000000"
-      }
-    },
     "1548757722118": {
       "type": "sub-banner-2",
       "blocks": {
@@ -196,12 +132,14 @@
         "1548758393375",
         "1548758428584"
       ],
+      "disabled": true,
       "settings": {
         "product_col_desktop_pro": 3
       }
     },
     "1546337900142": {
       "type": "banner-with-text",
+      "disabled": true,
       "settings": {
         "banner1_bg": "rgba(0,0,0,0)",
         "banner_title1": "New Mac 8pro.",
@@ -234,8 +172,8 @@
       "settings": {
         "class": "newproduct",
         "type_bg": "rgba(0,0,0,0)",
-        "title": "Specials",
-        "collection": "electronicss",
+        "title": "Lencería",
+        "collection": "elemar",
         "product_col": "1"
       }
     },
@@ -507,7 +445,6 @@
   },
   "order": [
     "1540267804198",
-    "fa0ad9f1-7b58-4fd2-91ff-2fc9ddc6bdec",
     "1548757722118",
     "1546337900142",
     "1523521292230",
