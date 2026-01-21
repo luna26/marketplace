@@ -11,6 +11,7 @@ export default {
         glob.sync("src/**/*.{js,scss}").map((file) => {
           // Obtener solo el nombre del archivo sin extensión
           const name = basename(file).replace(/\.(js|scss)$/, "");
+          console.log('---- file', file)
           return [name, resolve(__dirname, file)];
         })
       ),
