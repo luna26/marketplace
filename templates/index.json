@@ -29,7 +29,7 @@
             "bottom_desc_position": "left",
             "text_effect": "left",
             "title": "Save 35% OFF All Gadget",
-            "sub_title": "",
+            "sub_title": "Save 35% OFF All Gadget",
             "btn_txt": "Comprar",
             "btn_link": "shopify://collections"
           }
@@ -62,7 +62,7 @@
       ],
       "custom_css": [
         ".slider-content-wrap {left: 20px; max-width: 200px;}",
-        "@media (min-width: 769px) {.slider-content-wrap {max-width: none; }}"
+        "@media (min-width: 769px) {.slider-content-wrap {max-width: none; } .slider-subtitle {display: none }}"
       ],
       "settings": {
         "slider_home_auto": true,
