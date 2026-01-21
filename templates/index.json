@@ -75,6 +75,78 @@
         "slide_button_txt_hover_color": "#ffffff"
       }
     },
+    "1540009224472": {
+      "type": "category-slider",
+      "blocks": {
+        "1540009224472-0": {
+          "type": "text_block",
+          "settings": {
+            "show_banner": true,
+            "banner_subtitle": "Flat UpTo 30% OFF",
+            "banner_title": "Google Pro",
+            "banner_title_clr": "#000000",
+            "banner_subtitle_clr": "#000000",
+            "banner_btn_txt": "Go, Shop",
+            "banner_btn_txtlink": "",
+            "banner_btn_bg": "#6453f7",
+            "banner_btn_txt_clr": "#ffffff",
+            "banner_btn_hovertxt": "#ffffff",
+            "banner_btn_hoverbg": "#000000",
+            "title": "Camcorders",
+            "collection": "electronicss"
+          }
+        },
+        "1540009294478": {
+          "type": "text_block",
+          "settings": {
+            "show_banner": true,
+            "banner_subtitle": "Flat UpTo 30% OFF",
+            "banner_title": "Google Pixel",
+            "banner_title_clr": "#000000",
+            "banner_subtitle_clr": "#000000",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_txtlink": "",
+            "banner_btn_bg": "#6453f7",
+            "banner_btn_txt_clr": "#ffffff",
+            "banner_btn_hovertxt": "#ffffff",
+            "banner_btn_hoverbg": "#000000",
+            "title": "Cameras",
+            "collection": "electronics1"
+          }
+        },
+        "1540009305896": {
+          "type": "text_block",
+          "settings": {
+            "show_banner": true,
+            "banner_subtitle": "Flat UpTo 30% OFF",
+            "banner_title": "Pixel Phone",
+            "banner_title_clr": "#000000",
+            "banner_subtitle_clr": "#222222",
+            "banner_btn_txt": "Go, Shop",
+            "banner_btn_txtlink": "",
+            "banner_btn_bg": "#6453f7",
+            "banner_btn_txt_clr": "#ffffff",
+            "banner_btn_hovertxt": "#ffffff",
+            "banner_btn_hoverbg": "#000000",
+            "title": "Computers",
+            "collection": "electronics1"
+          }
+        }
+      },
+      "block_order": [
+        "1540009224472-0",
+        "1540009294478",
+        "1540009305896"
+      ],
+      "settings": {
+        "product_rows": true,
+        "product_col_desktop_pro": 3,
+        "product_col_mobile_pro": 1,
+        "type_bg": "rgba(0,0,0,0)",
+        "title_1": "Categorias",
+        "title_1_clr": "#000000"
+      }
+    },
     "1548757722118": {
       "type": "sub-banner-2",
       "blocks": {
@@ -272,78 +344,6 @@
         "banner_desc": "Big Sale @ Best Offers"
       }
     },
-    "1540009224472": {
-      "type": "category-slider",
-      "blocks": {
-        "1540009224472-0": {
-          "type": "text_block",
-          "settings": {
-            "show_banner": true,
-            "banner_subtitle": "Flat UpTo 30% OFF",
-            "banner_title": "Google Pro",
-            "banner_title_clr": "#000000",
-            "banner_subtitle_clr": "#000000",
-            "banner_btn_txt": "Go, Shop",
-            "banner_btn_txtlink": "",
-            "banner_btn_bg": "#6453f7",
-            "banner_btn_txt_clr": "#ffffff",
-            "banner_btn_hovertxt": "#ffffff",
-            "banner_btn_hoverbg": "#000000",
-            "title": "Camcorders",
-            "collection": "electronicss"
-          }
-        },
-        "1540009294478": {
-          "type": "text_block",
-          "settings": {
-            "show_banner": true,
-            "banner_subtitle": "Flat UpTo 30% OFF",
-            "banner_title": "Google Pixel",
-            "banner_title_clr": "#000000",
-            "banner_subtitle_clr": "#000000",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_txtlink": "",
-            "banner_btn_bg": "#6453f7",
-            "banner_btn_txt_clr": "#ffffff",
-            "banner_btn_hovertxt": "#ffffff",
-            "banner_btn_hoverbg": "#000000",
-            "title": "Cameras",
-            "collection": "electronics1"
-          }
-        },
-        "1540009305896": {
-          "type": "text_block",
-          "settings": {
-            "show_banner": true,
-            "banner_subtitle": "Flat UpTo 30% OFF",
-            "banner_title": "Pixel Phone",
-            "banner_title_clr": "#000000",
-            "banner_subtitle_clr": "#222222",
-            "banner_btn_txt": "Go, Shop",
-            "banner_btn_txtlink": "",
-            "banner_btn_bg": "#6453f7",
-            "banner_btn_txt_clr": "#ffffff",
-            "banner_btn_hovertxt": "#ffffff",
-            "banner_btn_hoverbg": "#000000",
-            "title": "Computers",
-            "collection": "electronics1"
-          }
-        }
-      },
-      "block_order": [
-        "1540009224472-0",
-        "1540009294478",
-        "1540009305896"
-      ],
-      "settings": {
-        "product_rows": true,
-        "product_col_desktop_pro": 3,
-        "product_col_mobile_pro": 1,
-        "type_bg": "rgba(0,0,0,0)",
-        "title_1": "Top Categories",
-        "title_1_clr": "#000000"
-      }
-    },
     "1504872752494": {
       "type": "feature-blogs",
       "settings": {
@@ -446,6 +446,7 @@
   },
   "order": [
     "1540267804198",
+    "1540009224472",
     "1548757722118",
     "1546337900142",
     "1523521292230",
@@ -453,7 +454,6 @@
     "1548758016127",
     "1548757814243",
     "1534486495985",
-    "1540009224472",
     "1504872752494",
     "1513236765628",
     "9b04c0f2-0194-4f8d-863f-74c498bdd8b5"
