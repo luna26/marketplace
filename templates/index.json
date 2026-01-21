@@ -179,6 +179,7 @@
     },
     "1548757741464": {
       "type": "right-banner",
+      "disabled": true,
       "settings": {
         "banner1_bg": "rgba(0,0,0,0)",
         "banner_title1": "Google Pixel Speaker !",
