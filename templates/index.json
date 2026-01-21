@@ -29,8 +29,8 @@
             "bottom_desc_position": "left",
             "text_effect": "left",
             "title": "Save 35% OFF All Gadget",
-            "sub_title": "Get 10% Extra Discount on First Order",
-            "btn_txt": "shop now",
+            "sub_title": "",
+            "btn_txt": "Comprar",
             "btn_link": "shopify://collections"
           }
         },
