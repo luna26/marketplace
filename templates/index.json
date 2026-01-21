@@ -75,76 +75,13 @@
         "slide_button_txt_hover_color": "#ffffff"
       }
     },
-    "fa0ad9f1-7b58-4fd2-91ff-2fc9ddc6bdec": {
-      "type": "category-item",
-      "blocks": {
-        "template--14549507342436__fa0ad9f1-7b58-4fd2-91ff-2fc9ddc6bdec-text_block-1": {
-          "type": "text_block",
-          "settings": {
-            "title": "Computer & Laptop",
-            "collection": "electronicss"
-          }
-        },
-        "0514fc36-a904-4dc3-b69c-b3ad1577a853": {
-          "type": "text_block",
-          "settings": {
-            "title": "Mobile & Gadget",
-            "collection": "electronics1"
-          }
-        },
-        "6f3c2dee-0a2c-4bce-98f6-8997154df634": {
-          "type": "text_block",
-          "settings": {
-            "title": "Electronics",
-            "collection": "electronicss"
-          }
-        },
-        "35d52a32-61eb-4fba-917a-cea3e74a57d8": {
-          "type": "text_block",
-          "settings": {
-            "title": "Laptop & Acc",
-            "collection": "electronicss"
-          }
-        },
-        "0adba953-012c-4cfd-bb9a-1f401d42323c": {
-          "type": "text_block",
-          "settings": {
-            "title": "Game Laptop",
-            "collection": "electronics1"
-          }
-        },
-        "11df1249-ecdf-4dfd-bfc2-7a4ac4f00392": {
-          "type": "text_block",
-          "settings": {
-            "title": "Snap Camera",
-            "collection": "electronicss"
-          }
-        }
-      },
-      "block_order": [
-        "template--14549507342436__fa0ad9f1-7b58-4fd2-91ff-2fc9ddc6bdec-text_block-1",
-        "0514fc36-a904-4dc3-b69c-b3ad1577a853",
-        "6f3c2dee-0a2c-4bce-98f6-8997154df634",
-        "35d52a32-61eb-4fba-917a-cea3e74a57d8",
-        "0adba953-012c-4cfd-bb9a-1f401d42323c",
-        "11df1249-ecdf-4dfd-bfc2-7a4ac4f00392"
-      ],
-      "settings": {
-        "product_rows": true,
-        "product_col_desktop_pro": 6,
-        "product_col_mobile_pro": 1,
-        "type_bg": "#ffffff",
-        "type_bg_cate": "#f9d401",
-        "title_1": "",
-        "title_1_clr": "#000000"
-      }
-    },
     "1548757722118": {
       "type": "sub-banner-2",
       "blocks": {
         "1548758339341": {
           "type": "image",
           "settings": {
+            "banner_image1": "shopify://shop_images/rack-of-womens-clothing.jpg",
             "title": "Google VR.",
             "subtitle": "Next Generation",
             "title_color": "#111111",
@@ -161,10 +98,11 @@
         "1548758393375": {
           "type": "image",
           "settings": {
+            "banner_image1": "shopify://shop_images/retail-shopping-package.jpg",
             "title": "New Logi Pro.",
             "subtitle": "Get Upto 70% Off",
-            "title_color": "#111111",
-            "subtitle_color": "#111111",
+            "title_color": "#ffffff",
+            "subtitle_color": "#ffffff",
             "btn": "Place Order",
             "banner_link1": "shopify://collections/electronics1",
             "btnbg_color": "#f9d401",
@@ -177,6 +115,7 @@
         "1548758428584": {
           "type": "image",
           "settings": {
+            "banner_image1": "shopify://shop_images/black-and-blue-clothing-on-a-rack-in-a-sunlit-shop.jpg",
             "title": "Pixel Tab",
             "subtitle": "New Accessories",
             "title_color": "#111111",
@@ -197,36 +136,7 @@
         "1548758428584"
       ],
       "settings": {
-        "product_col_desktop_pro": 3
-      }
-    },
-    "1546337900142": {
-      "type": "banner-with-text",
-      "settings": {
-        "banner1_bg": "rgba(0,0,0,0)",
-        "banner_title1": "New Mac 8pro.",
-        "banner_subtitle1": "Get 20% Off",
-        "title1_color": "#000000",
-        "subtitle1_color": "#000000",
-        "btn1_txt": "",
-        "banner_link1": "shopify://collections/gift-1",
-        "btn1_color": "#fe526c",
-        "btntxt1_color": "#ffffff",
-        "btnhover1_color": "#000000",
-        "btntxthover1_color": "#ffffff",
-        "text_position1": "center",
-        "banner2_bg": "rgba(0,0,0,0)",
-        "banner_title2": "Microsoft Studio",
-        "banner_subtitle2": "New Surface, Shop!",
-        "title2_color": "#000000",
-        "subtitle2_color": "#000000",
-        "btn2_txt": "",
-        "banner_link2": "shopify://collections/grocery",
-        "btn2_color": "#33caf9",
-        "btntxt2_color": "#ffffff",
-        "btnhover2_color": "#000000",
-        "btntxthover2_color": "#ffffff",
-        "text_position2": "center"
+        "product_col_desktop_pro": 4
       }
     },
     "1523521292230": {
@@ -234,13 +144,14 @@
       "settings": {
         "class": "newproduct",
         "type_bg": "rgba(0,0,0,0)",
-        "title": "Specials",
-        "collection": "electronicss",
+        "title": "Lencería",
+        "collection": "elemar",
         "product_col": "1"
       }
     },
     "1548757741464": {
       "type": "right-banner",
+      "disabled": true,
       "settings": {
         "banner1_bg": "rgba(0,0,0,0)",
         "banner_title1": "Google Pixel Speaker !",
@@ -333,78 +244,6 @@
         "banner_desc": "Big Sale @ Best Offers"
       }
     },
-    "1540009224472": {
-      "type": "category-slider",
-      "blocks": {
-        "1540009224472-0": {
-          "type": "text_block",
-          "settings": {
-            "show_banner": true,
-            "banner_subtitle": "Flat UpTo 30% OFF",
-            "banner_title": "Google Pro",
-            "banner_title_clr": "#000000",
-            "banner_subtitle_clr": "#000000",
-            "banner_btn_txt": "Go, Shop",
-            "banner_btn_txtlink": "",
-            "banner_btn_bg": "#6453f7",
-            "banner_btn_txt_clr": "#ffffff",
-            "banner_btn_hovertxt": "#ffffff",
-            "banner_btn_hoverbg": "#000000",
-            "title": "Camcorders",
-            "collection": "electronicss"
-          }
-        },
-        "1540009294478": {
-          "type": "text_block",
-          "settings": {
-            "show_banner": true,
-            "banner_subtitle": "Flat UpTo 30% OFF",
-            "banner_title": "Google Pixel",
-            "banner_title_clr": "#000000",
-            "banner_subtitle_clr": "#000000",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_txtlink": "",
-            "banner_btn_bg": "#6453f7",
-            "banner_btn_txt_clr": "#ffffff",
-            "banner_btn_hovertxt": "#ffffff",
-            "banner_btn_hoverbg": "#000000",
-            "title": "Cameras",
-            "collection": "electronics1"
-          }
-        },
-        "1540009305896": {
-          "type": "text_block",
-          "settings": {
-            "show_banner": true,
-            "banner_subtitle": "Flat UpTo 30% OFF",
-            "banner_title": "Pixel Phone",
-            "banner_title_clr": "#000000",
-            "banner_subtitle_clr": "#222222",
-            "banner_btn_txt": "Go, Shop",
-            "banner_btn_txtlink": "",
-            "banner_btn_bg": "#6453f7",
-            "banner_btn_txt_clr": "#ffffff",
-            "banner_btn_hovertxt": "#ffffff",
-            "banner_btn_hoverbg": "#000000",
-            "title": "Computers",
-            "collection": "electronics1"
-          }
-        }
-      },
-      "block_order": [
-        "1540009224472-0",
-        "1540009294478",
-        "1540009305896"
-      ],
-      "settings": {
-        "product_rows": true,
-        "product_col_desktop_pro": 3,
-        "product_col_mobile_pro": 1,
-        "type_bg": "rgba(0,0,0,0)",
-        "title_1": "Top Categories",
-        "title_1_clr": "#000000"
-      }
-    },
     "1504872752494": {
       "type": "feature-blogs",
       "settings": {
@@ -421,62 +260,22 @@
     "1513236765628": {
       "type": "our_brand",
       "blocks": {
-        "1513236765628-0": {
-          "type": "brand_image",
-          "settings": {
-            "link": "#"
-          }
-        },
-        "1513236765628-1": {
-          "type": "brand_image",
-          "settings": {
-            "link": "#"
-          }
-        },
-        "1513236765628-2": {
-          "type": "brand_image",
-          "settings": {
-            "link": "#"
-          }
-        },
-        "1513236765628-3": {
-          "type": "brand_image",
-          "settings": {
-            "link": "#"
-          }
-        },
-        "1513238013377": {
-          "type": "brand_image",
-          "settings": {
-            "link": "#"
-          }
-        },
-        "1513238403251": {
-          "type": "brand_image",
-          "settings": {
-            "link": "#"
-          }
-        },
         "1513238453700": {
           "type": "brand_image",
           "settings": {
+            "image": "shopify://shop_images/elemar.avif",
             "link": "#"
           }
         },
         "1523515532537": {
           "type": "brand_image",
           "settings": {
+            "image": "shopify://shop_images/okstyle.jpg",
             "link": "#"
           }
         }
       },
       "block_order": [
-        "1513236765628-0",
-        "1513236765628-1",
-        "1513236765628-2",
-        "1513236765628-3",
-        "1513238013377",
-        "1513238403251",
         "1513238453700",
         "1523515532537"
       ],
@@ -484,7 +283,7 @@
         "product_col_desktop_pro": 6,
         "product_col_mobile_pro": 2,
         "addclass": "brands",
-        "title": "Manufacturers",
+        "title": "Tiendas",
         "bg": "rgba(0,0,0,0)"
       }
     },
@@ -507,15 +306,12 @@
   },
   "order": [
     "1540267804198",
-    "fa0ad9f1-7b58-4fd2-91ff-2fc9ddc6bdec",
     "1548757722118",
-    "1546337900142",
     "1523521292230",
     "1548757741464",
     "1548758016127",
     "1548757814243",
     "1534486495985",
-    "1540009224472",
     "1504872752494",
     "1513236765628",
     "9b04c0f2-0194-4f8d-863f-74c498bdd8b5"
