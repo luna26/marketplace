@@ -61,8 +61,8 @@
         "1540267804198-1"
       ],
       "custom_css": [
-        ".slider-content-wrap {left: 16px; max-width: 200px;}",
-        "@media (min-width: 769px) {.slider-content-wrap {/* estilos para desktop */ }}"
+        ".slider-content-wrap {left: 20px; max-width: 200px;}",
+        "@media (min-width: 769px) {.slider-content-wrap {max-width: 200px; }}"
       ],
       "settings": {
         "slider_home_auto": true,
