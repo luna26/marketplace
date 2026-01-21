@@ -15,6 +15,7 @@
         "1540267804198-0": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
             "show_video": false,
             "video_url": "",
             "title_color": "#000000",
