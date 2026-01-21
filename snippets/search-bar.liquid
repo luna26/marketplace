@@ -1,0 +1,82 @@
+{% comment %}
+
+  A snippet to include a search bar anywhere in your theme.
+  Note we are using 'input-group' for the layout. Look under Forms > Input Groups for some demos.
+
+  More information:
+   - http://docs.shopify.com/themes/liquid-variables/search
+
+  To return only products in results:
+    - http://docs.shopify.com/manual/configuration/store-customization/return-only-product-in-storefront-search-results
+    - Or manually add type=product to the search URL as a query parameter
+    - Uncomment hidden input with value="product" below
+
+{% endcomment %}
+<label class="form-label--hidden">
+  <span class="visuallyhidden">{{ 'general.search.placeholder' | t }}</span>
+</label>
+
+ <div id="header-search" class="input-group">
+<form  action="/search" method="get" class="input-group search-bar" role="search" onsubmit="return handleSearchSubmit(event);">
+
+   <input type="hidden" name="type" value="product">
+  <input id="search-input" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.placeholder' | t }}" class="input-group-field" aria-label="{{ 'general.search.placeholder' | t }}"> 
+
+
+  
+ {% if settings.search_collection != blank %}
+  <div class="collections-selector">
+    <select name="collection" id="collection-option" class="single-option-selector" data-option="collection-option" onchange="redirectToCollection(this)">
+      <option value="all">All Collection</option>
+      {% for collection in collections %}
+        <option value="{{ collection.handle }}">{{ collection.title }}</option>
+      {% endfor %}
+    </select>
+  </div>
+ {% endif %}
+
+  
+  <!-- <input type="search" id="search-input" placeholder="Search our product" class="input-group-field" aria-label="Search"> -->
+
+  <span class="input-group-btn search-submit-wrap">
+    <button type="submit" class="btn search-submit icon-fallback-text">
+      <i class="mdi mdi-magnify"></i>
+      <span class="fallback-text">{{ 'general.search.submit' | t }}</span>
+    </button>
+  </span>
+</form>
+ </div>
+ 
+<script>
+  function redirectToCollection(select) {
+    const handle = select.value;
+    const keyword = document.getElementById('search-input').value.trim();
+  }
+
+  function handleSearchSubmit(e) {
+    e.preventDefault(); // Stop default form behavior
+
+    const keyword = document.getElementById('search-input').value.trim();
+    const handle = document.getElementById('collection-option').value;
+
+    let searchUrl = '/search';
+
+    if (keyword !== '') {
+      searchUrl += '?q=' + encodeURIComponent(keyword);
+    }
+
+    if (handle !== '') {
+      // Append collection filter only if collection is selected
+      if (keyword !== '') {
+        searchUrl += '&filter=v:collection:' + encodeURIComponent(handle);
+      } else {
+        // No keyword, just redirect to collection page
+        window.location.href = '/collections/' + encodeURIComponent(handle);
+        return false;
+      }
+    }
+
+    window.location.href = searchUrl;
+    return false;
+  }
+</script>

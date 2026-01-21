@@ -1,0 +1,132 @@
+{% assign grid_results = false %}
+{% assign respond_js_secret_key = shop.domain | md5 %}
+
+{% unless search.terms == respond_js_secret_key %}
+<div class="container">
+  <div class="search-bar search-bar-sec">
+    <h1 class="h2 left tt-innerpagetitle" style="width:100%;">{{ 'general.search.title' | t }}</h1>
+    <div id="header-search" class="input-group">
+      <form action="/search" method="get" id="collection-search-form" class="input-group search-bar" role="search">
+        <div class="collections-selector">
+          <select id="collection-option-search" class="single-option-selector">
+            <option value="">All Collections</option>
+            {% for collection in collections %}
+              <option value="{{ collection.handle }}">{{ collection.title }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <input
+          type="search"
+          id="search-input-box"
+          name="q"
+          placeholder="Search our product"
+          class="input-group-field"
+          aria-label="Search"
+          value="{{ search.terms | escape }}"
+        >
+
+        <span class="input-group-btn search-submit-wrap">
+          <button type="submit" class="btn search-submit icon-fallback-text">
+            <i class="mdi mdi-magnify"></i>
+            <span class="fallback-text">Search</span>
+          </button>
+        </span>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+{% if search.performed %}
+  {% paginate search.results by 10 %}
+  <div class="search-products page-content-wrapper col-xs-12">
+    <div class="container">
+      {% unless products_per_page  %}
+        {% assign products_per_page = 10 %}
+      {% endunless %}
+
+      {% if search.results_count == 0 %}
+        <h1 class="text--left section-header__title" style="width:100%;">{{ 'general.search.no_results_html' | t: terms: search.terms }}</h1>
+        <hr>
+      {% else %}
+        <h1 class="text--left section-header__title" style="width:100%;">{{ 'general.search.results_for_html' | t: terms: search.terms }}</h1>
+        <hr>
+
+        {% if grid_results == false %}
+          <div class="search-result-product">
+            <div class="grid-uniform product-grid col-main">
+              <div class="row">
+                <div class="products-grid-view">
+                  {% for item in search.results %}
+                    {% render 'search-result', product: item %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% else %}
+          <div class="grid-uniform">
+            {% for item in search.results %}
+              {% render 'search-result-grid', product: item %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endif %}
+
+      {% if paginate.pages > 1 %}
+        <div class="text-center">
+          {% render 'pagination-custom', paginate: paginate %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endpaginate %}
+{% endif %}
+{% else %}
+  {% render 'respond' %}
+  {% layout none %}
+{% endunless %}
+
+<!-- ✅ Custom JavaScript -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('collection-search-form');
+    const select = document.getElementById('collection-option-search');
+    const input = document.getElementById('search-input-box');
+
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const keyword = input.value.trim();
+        const handle = select.value;
+
+        let searchUrl = '/search';
+
+        if (keyword !== '') {
+          searchUrl += '?q=' + encodeURIComponent(keyword);
+
+          // Optional: If you want to filter within a specific collection
+          if (handle !== '') {
+            searchUrl += '+collection:' + encodeURIComponent(handle);
+          }
+        } else if (handle !== '') {
+          // If no keyword but collection selected, show collection page
+          searchUrl = '/collections/' + handle;
+        }
+
+        window.location.href = searchUrl;
+      });
+    }
+
+    if (select) {
+      select.addEventListener('change', function () {
+        // Optional: Auto-trigger search on collection change if desired
+        // form.dispatchEvent(new Event('submit')); // Uncomment to auto-search
+      });
+    }
+  });
+</script>
+

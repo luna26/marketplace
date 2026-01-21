@@ -1,0 +1,264 @@
+<div
+  {% if settings.enable_animation != blank %}
+    data-aos="fade-up"
+  {% endif %}
+  class="page-width feature-row"
+  data-section-id="{{ section.id }}"
+  data-section-type="banner-section"
+>
+  <div id="cmsbanner_{{ section.id }}" class="ttcmsbanner">
+    <div class="cmsbanner">
+      <div class="ttbanner1 ttbanner banner1 col-sm-6 col-xs-6">
+        <div class="feature-row__item ttbanner-img">
+          <div class="banner_img">
+            <a>
+              {% if section.settings.banner_image1 != blank %}
+                <img
+                  loading="lazy"
+                  height="245px"
+                  width="380px"
+                  src="{{  section.settings.banner_image1 | img_url: "master" }}"
+                  alt="banner-image"
+                >
+              {% endif %}
+            </a>
+            <div class="ttbanner-content {{ section.settings.text_position1 }}">
+              <div class="ttbaaner-subtitle">{{ section.settings.banner_subtitle1 }}</div>
+
+              <div class="ttbaaner-title">{{ section.settings.banner_title1 }}</div>
+              {% if section.settings.btn1_txt != blank %}
+                <div class="ttbaaner-button">
+                  <a href="{{section.settings.banner_link1 }}">{{ section.settings.btn1_txt }}</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ttbanner1 ttbanner banner2 col-sm-6 col-xs-6">
+        <div class="feature-row__item ttbanner-img">
+          <div class="banner_img">
+            <a href="{{section.settings.banner_link2 }}">
+              {% if section.settings.banner_image2 != blank %}
+                <img
+                  loading="lazy"
+                  height="245px"
+                  width="380px"
+                  src="{{  section.settings.banner_image2 | img_url: "master" }}"
+                  alt="banner-image"
+                >
+              {% endif %}
+            </a>
+            <div class="ttbanner-content {{ section.settings.text_position2 }}">
+              <div class="ttbaaner-subtitle">{{ section.settings.banner_subtitle2 }}</div>
+
+              <div class="ttbaaner-title">{{ section.settings.banner_title2 }}</div>
+              {% if section.settings.btn2_txt != blank %}
+                <div class="ttbaaner-button">
+                  <a href="{{section.settings.banner_link2 }}">{{ section.settings.btn2_txt }}</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  {% if section.settings.banner2_bg != blank %}#cmsbanner_{{ section.id }} .ttbanner.banner1 .ttbanner-img{background:{{ section.settings.banner1_bg }};}#cmsbanner_{{ section.id }} .ttbanner.banner2 .ttbanner-img{background:{{ section.settings.banner2_bg }};}{% endif %}#cmsbanner_{{ section.id }} .ttbanner.banner1 .banner_img .ttbanner-content .ttbaaner-title{color:{{section.settings.title1_color}};}#cmsbanner_{{ section.id }} .ttbanner.banner1 .banner_img .ttbanner-content .ttbaaner-subtitle{color:{{section.settings.subtitle1_color}};}#cmsbanner_{{ section.id }} .ttbanner.banner2 .ttbanner-img .ttbanner-content .ttbaaner-title{color:{{section.settings.title2_color}};}#cmsbanner_{{ section.id }} .ttbanner.banner2 .banner_img .ttbanner-content .ttbaaner-subtitle{color:{{section.settings.subtitle2_color}};}#cmsbanner_{{ section.id }} .banner1 .banner_img .ttbanner-content .ttbaaner-button > a{background:{{section.settings.btn1_color }};color:{{section.settings.btntxt1_color }};}#cmsbanner_{{ section.id }} .banner1 .banner_img .ttbanner-content .ttbaaner-button > a:hover{background:{{section.settings.btnhover1_color }};color:{{section.settings.btntxthover1_color }};}#cmsbanner_{{ section.id }} .banner2 .banner_img .ttbanner-content .ttbaaner-button > a{background:{{section.settings.btn2_color }};color:{{section.settings.btntxt2_color }};}#cmsbanner_{{ section.id }} .banner2 .banner_img .ttbanner-content .ttbaaner-button > a:hover{background:{{section.settings.btnhover2_color }};color:{{section.settings.btntxthover2_color }};}
+</style>
+{% schema %}
+{
+"name": "Home Banner with text",
+"class": "bannerwithtext col-sm-3 col-xs-3",
+"settings": [
+{
+"type": "image_picker",
+"id": "banner_image1",
+"label": "Image"
+},
+
+{
+"type": "color",
+"id": "banner1_bg",
+"label": "banner 1 background color",
+"default": "#f4f3f0"
+},
+{
+"type": "text",
+"id": "banner_title1",
+"label": "Banner Title 1",
+"default": "jackets"
+},
+{
+"type": "text",
+"id": "banner_subtitle1",
+"label": "Banner Subtitle 1",
+"default": "women"
+},
+{
+"type": "color",
+"id": "title1_color",
+"label": "Title1 color",
+"default": "#fff"
+},
+{
+"type": "color",
+"id": "subtitle1_color",
+"label": "Subtitle1 color",
+"default": "#fff"
+},
+{
+"type": "text",
+"id": "btn1_txt",
+"label": "button text",
+"default": "explore more"
+},
+{
+"type": "url",
+"id": "banner_link1",
+"label": "button 1 link"
+},
+{
+"type": "color",
+"id": "btn1_color",
+"label": "button1 background color",
+"default": "#FFD203"
+},
+{
+"type": "color",
+"id": "btntxt1_color",
+"label": "button1 text color",
+"default": "#000000"
+},
+{
+"type": "color",
+"id": "btnhover1_color",
+"label": "button1 hover background color",
+"default": "#000000"
+},
+{
+"type": "color",
+"id": "btntxthover1_color",
+"label": "button1 hover text color",
+"default": "#fff"
+},
+{
+"type": "select",
+"id": "text_position1",
+"label": "Text Position",
+"options": [
+{
+"value": "left",
+"label": "left"
+},
+{
+"value": "right",
+"label": "Right"
+},
+{
+"value": "center",
+"label": "Center"
+}
+]
+},
+{
+"type": "image_picker",
+"id": "banner_image2",
+"label": "Shop now"
+},
+
+{
+"type": "color",
+"id": "banner2_bg",
+"label": "banner 2 background color",
+"default": "#f4f3f0"
+},
+{
+"type": "text",
+"id": "banner_title2",
+"label": "Banner Title 2",
+"default": "Shirts"
+},
+{
+"type": "text",
+"id": "banner_subtitle2",
+"label": "Banner Subtitle 2",
+"default": "women"
+},
+{
+"type": "color",
+"id": "title2_color",
+"label": "Title2 color",
+"default": "#000"
+},
+{
+"type": "color",
+"id": "subtitle2_color",
+"label": "Subtitle2 color",
+"default": "#000"
+},
+{
+"type": "text",
+"id": "btn2_txt",
+"label": "button text",
+"default": "discover now"
+},
+{
+"type": "url",
+"id": "banner_link2",
+"label": "Button link 2"
+},
+{
+"type": "color",
+"id": "btn2_color",
+"label": "button2 background color",
+"default": "#000000"
+},
+{
+"type": "color",
+"id": "btntxt2_color",
+"label": "button2 text color",
+"default": "#fff"
+},
+{
+"type": "color",
+"id": "btnhover2_color",
+"label": "button2 hover background color",
+"default": "#F8653D"
+},
+{
+"type": "color",
+"id": "btntxthover2_color",
+"label": "button2 hover text color",
+"default": "#fff"
+},
+{
+"type": "select",
+"id": "text_position2",
+"label": "Text Position",
+"options": [
+{
+"value": "left",
+"label": "left"
+},
+{
+"value": "right",
+"label": "Right"
+},
+{
+"value": "center",
+"label": "Center"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Home Banner with text",
+"category": "Image"
+}
+]
+}
+{% endschema %}

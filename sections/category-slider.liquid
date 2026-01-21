@@ -1,0 +1,443 @@
+<div {% if settings.enable_animation != blank %} data-aos="fade-up" {% endif %} data-section-id="{{ section.id }}"  data-section-type="product-tab-type-1" class="category-slider">
+  {%- assign collection = collections[section.settings.collection] -%}
+  {%- assign grid_item_width = 'small--one-half medium-up--one-quarter' -%}
+  {%- assign image_size = '170x170' -%}
+  {%- assign product_limit =  8 -%}
+    <div class="grid__item">        
+      {% if section.settings.title_1 != blank or section.settings.text_1  %}
+      <div class="box-heading tthometab-title section-header">
+        {% endif %}  
+        {% if section.settings.title_1 != blank %}
+        <h2 class="tt-title">{{ section.settings.title_1 }}</h2>
+        {% endif %}
+        {% if section.settings.title_1 != blank or section.settings.caption_1  %}
+        <ul id="tab_product_{{ section.id }}" class="nav nav-tabs">  
+          {%  assign block_size = 1 %} 
+          {% for block in section.blocks %} 
+          {% if block.settings.title != blank %}
+          <li class="tabs{% if block_size == 1 %} active{% endif %}"><a href="#tabs-{{ block.id }}" data-toggle="tab" aria-expanded="false">{{ block.settings.title }}</a></li>     
+          {% endif %}
+          {% assign block_size = block_size | plus: 1 %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      {% if section.blocks.size > 0 %} 
+      <div class="TTProduct-Tab-container{% if section.settings.type_bg != "rgba(0,0,0,0)" %} has_bg{% endif %}"> 
+        <div class="TTcatProduct-Tab"> 
+          <div class="tab-inner tab-content tab-container{% if section.settings.product_rows %} two_rows{% endif %}">   
+            <div class="row">
+              {% assign block_size = 1 %}  
+              {% for block in section.blocks %}
+              {%- assign collection = collections[block.settings.collection] -%}
+              {% assign cnt = 1 %}  
+              {%- assign foundpro = collection.products.count -%} 
+              <div id="tabs-{{ block.id }}" class="contents tab-pane fade product_col_desktop_pro{{ section.settings.product_col_desktop_pro }} product_col_mobile_pro{{ section.settings.product_col_mobile_pro }}{% if block_size == 1 %} in active{% endif %}">
+
+              {% if block.settings.show_banner != blank %}
+                <div class="categoryimage col-sm-2 ">
+                  {% if block.settings.cat_image1 != blank %}
+                  <img loading="lazy" height="auto" width="245px" src="{{ block.settings.cat_image1 | img_url: "master"  }}" alt="category slider" />
+                    {% endif %}
+                  <div class="content">
+
+                {% if block.settings.banner_subtitle != blank %}
+                    <div class="banner-subtitle"> {{ block.settings.banner_subtitle }} </div>
+                {% endif %}
+                    <div class="banner-title">{{ block.settings.banner_title }}</div>
+                    <a href="{{ block.settings.banner_btn_txtlink }}" class="btn"><div class="banner-btn">{{ block.settings.banner_btn_txt }}</div></a>
+                  </div>
+                  <style> .category-slider #tabs-{{ block.id }} .categoryimage .content .banner-subtitle{color:{{ block.settings.banner_subtitle_clr }};} .category-slider #tabs-{{ block.id }} .categoryimage .content .banner-title{color:{{ block.settings.banner_title_clr }};}.category-slider #tabs-{{ block.id }} .categoryimage .content a{color:{{ block.settings.banner_btn_txt_clr }};background:{{ block.settings.banner_btn_bg }};}.category-slider #tabs-{{ block.id }} .categoryimage .content a:hover{color:{{ block.settings.banner_btn_hovertxt }};background:{{ block.settings.banner_btn_hoverbg }};}</style>
+                </div>   
+              {% endif %}
+                
+                <div class="cat-slider  {% if block.settings.show_banner != blank %} col-sm-10 {% else %} awidth col-12{% endif %}">
+                  <div class="{{ block.settings.title | handle }}-{{ block.id }} {{ block.settings.title | handle }}-wrap owl-carousel owl-theme">
+                    {% for product in collection.products limit:product_limit %}
+                    {%- assign mod_2 = cnt | modulo:2 -%}
+                    {% if foundpro >= 8 and foundpro >= 4%}
+                    {% if section.settings.product_rows %}
+                    {%  if mod_2 != 0  %}
+                    <div class='li_single'>
+                      {% endif    %}
+                      {% endif  %}
+                      {% endif %}
+                      {% render 'product-card-grid',collection: collection, product: product, grid_image_width: image_size %}
+                      {% if foundpro >= 8 and foundpro >= 4 %}
+                      {% if section.settings.product_rows %}
+                      {%  if mod_2 == 0  %}
+                    </div>
+                    {% endif %}
+                    {% endif %}
+                    {% assign cnt = cnt | plus: 1 %}
+                    {% endif %}
+                    {% endfor %}
+                    {% if foundpro >= 8 and foundpro >= 4 %}
+                    {% if section.settings.product_rows %}
+                    {%  if mod_2 != 0  %}
+                  </div>
+                  {% endif %}
+                  {% endif %}
+                  {% endif %} 
+                </div>
+              </div>  
+              {% if foundpro > 4 and foundpro < 8 or foundpro >= 8 %}
+              <div class="{{ block.settings.title | handle }}-nav customNavigation">
+                <div class="navigation_wrap">
+                  <a class="prev mdi-chevron-left">{{ 'general.slider.prev' | t }}</a>
+                  <a class="next mdi-chevron-right">{{ 'general.slider.next' | t }}</a> 
+                </div>
+              </div>
+              {% endif %}
+            </div> 
+
+
+            <script type = "text/javascript"> 
+              
+              jQuery(document).ready(function () {
+   if (jQuery("body:not(.rtl)").hasClass('both_sidebar')) {
+      var tab_carousel_1 = $("body.both_sidebar:not(.rtl) .{{ block.settings.title | handle }}-{{ block.id }}");
+      jQuery(tab_carousel_1).owlCarousel({
+         items: {{section.settings.product_col_desktop_pro}},
+
+         autoPlay: !1,
+         stopOnHover: !1,
+         loop: !1,
+         responsive: {
+            100: {
+               items: 1
+            },
+              320: {
+              items: {{section.settings.product_col_mobile_pro}}
+            },
+            481: {
+               items: 1
+            },
+            768: {
+               items: 1
+            },
+            992: {
+               items: 2
+            },
+            1200: {
+               items: 2
+            },
+            1400: {
+               items: 3
+            },
+            1700: {
+               items: {{section.settings.product_col_desktop_pro}}
+            }
+         },
+         nav: !0,
+         dots: !1
+      })
+   } else {
+      var tab_carousel = $("body:not(.rtl.both_sidebar) .{{ block.settings.title | handle }}-{{ block.id }}");
+      jQuery(tab_carousel).owlCarousel({
+         items: {{section.settings.product_col_desktop_pro}},
+
+         autoPlay: !1,
+         stopOnHover: !1,
+         loop: !1,
+         responsive: {
+            100: {
+               items: 1
+            },
+              320: {
+              items: {{section.settings.product_col_mobile_pro}}
+            },
+            481: {
+               items: 1
+            },
+            768: {
+               items: 1
+            },
+            992: {
+               items: 2
+            },
+            1200: {
+               items: 2
+            },
+            1400: {
+               items: 3
+            },
+            1700: {
+               items: {{section.settings.product_col_desktop_pro}}
+            }
+         },
+         nav: !0,
+         dots: !1
+      })
+   }
+   if (jQuery("body.rtl").hasClass('both_sidebar')) {
+      var tab_carousel2_1 = $("body.both_sidebar .{{ block.settings.title | handle }}-{{ block.id }}");
+      jQuery(tab_carousel2_1).owlCarousel({
+         items: {{section.settings.product_col_desktop_pro}},
+
+         autoPlay: !1,
+         stopOnHover: !1,
+         loop: !1,
+         rtl: !0,
+         responsive: {
+            100: {
+               items: 1
+            },
+              320: {
+              items: {{section.settings.product_col_mobile_pro}}
+            },
+            481: {
+               items: 1
+            },
+            768: {
+               items: 1
+            },
+            992: {
+               items: 2
+            },
+            1200: {
+               items: 2
+            },
+            1400: {
+               items: 3
+            },
+            1700: {
+               items: {{section.settings.product_col_desktop_pro}}
+            }
+         },
+         nav: !0,
+         dots: !1
+      })
+   } else {
+      var tab_carousel2 = $("body.rtl:not(.both_sidebar) .{{ block.settings.title | handle }}-{{ block.id }}");
+      jQuery(tab_carousel2).owlCarousel({
+         items: {{section.settings.product_col_desktop_pro}},
+         autoPlay: !1,
+         stopOnHover: !1,
+         loop: !1,
+         rtl: !0,
+         responsive: {
+            100: {
+               items: 1
+            },
+              320: {
+              items: {{section.settings.product_col_mobile_pro}}
+            },
+            481: {
+               items: 1
+            },
+            768: {
+               items: 1
+            },
+            992: {
+               items: 2
+            },
+            1200: {
+               items: 2
+            },
+            1400: {
+               items: 3
+            },
+            1700: {
+               items: {{section.settings.product_col_desktop_pro}}
+            }
+         },
+         nav: !0,
+         dots: !1
+      })
+   }
+   jQuery(".{{ block.settings.title | handle }}-nav .next").click(function () {
+      jQuery(".{{ block.settings.title | handle }}-{{ block.id }}").trigger('next.owl')
+   });
+   jQuery(".{{ block.settings.title | handle }}-nav .prev").click(function () {
+      jQuery(".{{ block.settings.title | handle }}-{{ block.id }}").trigger('prev.owl')
+   })
+});
+jQuery(window).load(function () {
+   if (jQuery(".{{ block.settings.title | handle }}-wrap").find('.owl-nav').hasClass('disabled')) {
+      jQuery(".{{ block.settings.title | handle }}-nav").hide()
+   } else {
+      jQuery(".{{ block.settings.title | handle }}-nav").show()
+   }
+});
+jQuery(window).resize(function () {
+   if (jQuery(".{{ block.settings.title | handle }}-wrap").find('.owl-nav').hasClass('disabled')) {
+      jQuery(".{{ block.settings.title | handle }}-nav").hide()
+   } else {
+      jQuery(".{{ block.settings.title | handle }}-nav").show()
+   }
+}) 
+                </script>
+            
+            
+            <!-- <script type="text/javascript">jQuery(document).ready(function(){if(jQuery("body:not(.rtl)").hasClass('both_sidebar')){var tab_carousel_1=$("body.both_sidebar:not(.rtl) .{{ block.settings.title | handle }}-{{ block.id }}");jQuery(tab_carousel_1).owlCarousel({items:{{section.settings.cat_product_col}},autoPlay:!1,stopOnHover:!1,loop:!1,responsive:{100:{items:1},481:{items:1},768:{items:1},992:{items:2},1200:{items:2},1400:{items:3},1700:{items:{{section.settings.cat_product_col}}}},nav:!0,dots:!1})}else{var tab_carousel=$("body:not(.rtl.both_sidebar) .{{ block.settings.title | handle }}-{{ block.id }}");jQuery(tab_carousel).owlCarousel({items:{{section.settings.cat_product_col}},autoPlay:!1,stopOnHover:!1,loop:!1,responsive:{100:{items:1},481:{items:1},768:{items:1},992:{items:2},1200:{items:2},1400:{items:3},1700:{items:{{section.settings.cat_product_col}}}},nav:!0,dots:!1})}if(jQuery("body.rtl").hasClass('both_sidebar')){var tab_carousel2_1=$("body.both_sidebar .{{ block.settings.title | handle }}-{{ block.id }}");jQuery(tab_carousel2_1).owlCarousel({items:{{section.settings.cat_product_col}},autoPlay:!1,stopOnHover:!1,loop:!1,rtl:!0,responsive:{100:{items:1},481:{items:1},768:{items:1},992:{items:2},1200:{items:2},1400:{items:3},1700:{items:{{section.settings.cat_product_col}}}},nav:!0,dots:!1})}else{var tab_carousel2=$("body.rtl:not(.both_sidebar) .{{ block.settings.title | handle }}-{{ block.id }}");jQuery(tab_carousel2).owlCarousel({items:{{section.settings.cat_product_col}},autoPlay:!1,stopOnHover:!1,loop:!1,rtl:!0,responsive:{100:{items:1},481:{items:1},768:{items:1},992:{items:2},1200:{items:2},1400:{items:3},1700:{items:{{section.settings.cat_product_col}}}},nav:!0,dots:!1})}jQuery(".{{ block.settings.title | handle }}-nav .next").click(function(){jQuery(".{{ block.settings.title | handle }}-{{ block.id }}").trigger('next.owl')});jQuery(".{{ block.settings.title | handle }}-nav .prev").click(function(){jQuery(".{{ block.settings.title | handle }}-{{ block.id }}").trigger('prev.owl')})});jQuery(window).load(function(){if(jQuery(".{{ block.settings.title | handle }}-wrap").find('.owl-nav').hasClass('disabled')){jQuery(".{{ block.settings.title | handle }}-nav").hide()}else{jQuery(".{{ block.settings.title | handle }}-nav").show()}});jQuery(window).resize(function(){if(jQuery(".{{ block.settings.title | handle }}-wrap").find('.owl-nav').hasClass('disabled')){jQuery(".{{ block.settings.title | handle }}-nav").hide()}else{jQuery(".{{ block.settings.title | handle }}-nav").show()}})</script> -->
+            {% assign block_size = block_size | plus: 1 %}
+            {% endfor %}
+          </div><!--End tabs container-->
+        </div><!--End tabs-->
+      </div>
+    </div>                          
+    {% endif %}
+  </div>
+</div>
+<style>.category-slider .tthometab-title .tt-title{color:{{ section.settings.title_1_clr }};}.category-slider .TTProduct-Tab-container{float:left;width:100%;background-color:{{ section.settings.type_bg }};}</style>
+{% schema %}
+{
+"name": "category slider",
+"class": "index-section category slider",
+"settings": [
+{
+"type": "checkbox",
+"id": "product_rows",
+"label": "2 Rows Product",
+  "info" : "2 Row Only Work When, More Then 8 Product On Your Collection"
+
+},
+        {
+"type": "range",
+"id": "product_col_desktop_pro",
+"min": 2,
+"max": 20,
+"step": 1,
+"label": "Number of columns on Desktop",
+"default": 3
+},
+
+
+{
+"type": "range",
+"id": "product_col_mobile_pro",
+"min": 1,
+"max": 3,
+"step": 1,
+"label": "Number of columns on Mobile",
+"default": 1
+},
+{
+"type": "color",
+"id": "type_bg",
+"label": "Background color",
+"default": "#fff"
+},
+{
+"type": "text",
+"id": "title_1",
+"label": "Heading"
+},
+{
+"type": "color",
+"id": "title_1_clr",
+"label": "Heading color",
+"default": "#000"
+}
+],
+"blocks": [	
+{
+"type": "text_block",
+"name": "Column",
+"settings": [
+
+
+  
+
+          {
+        "type": "checkbox",
+        "id": "show_banner",
+        "label": "Display Banner",
+        "default": true
+      },
+
+    {
+"type": "text",
+"id": "banner_subtitle",
+"label": "Banner Sub-title",
+"default": "Flat UpTo 30% OFF"
+},
+  
+{
+"type": "text",
+"id": "banner_title",
+"label": "banner title"
+},
+{
+"type": "color",
+"id": "banner_title_clr",
+"label": "banner title color"
+},
+
+
+  {
+"type": "color",
+"id": "banner_subtitle_clr",
+"label": "banner Sub-title color"
+},
+  
+{
+"type": "text",
+"id": "banner_btn_txt",
+"label": "banner button text"
+},
+{
+"type": "url",
+"id": "banner_btn_txtlink",
+"label": "banner button link"
+},
+{
+"type": "color",
+"id": "banner_btn_bg",
+"label": "banner button color"
+},
+{
+"type": "color",
+"id": "banner_btn_txt_clr",
+"label": "banner button text color"
+},
+{
+"type": "color",
+"id": "banner_btn_hovertxt",
+"label": "banner button hover text color"
+},
+{
+"type": "color",
+"id": "banner_btn_hoverbg",
+"label": "banner button hover color"
+},
+
+{
+"type": "image_picker",
+"id": "cat_image1",
+"label": "Image"
+},
+
+  
+
+	
+{
+"type": "text",
+"id": "title",
+"label": "Collection Name",
+"default": "Tab Name"
+},	
+
+  
+{
+"id": "collection",
+"type": "collection",
+"label": "Collection"
+}	
+]
+}
+],
+"presets": [
+{
+"name": "category slider",
+"category": "Collection",
+"blocks": [
+{
+"type": "text_block"
+}        
+]
+}
+]
+}
+{% endschema %}

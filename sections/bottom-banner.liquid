@@ -1,0 +1,96 @@
+<div {% if settings.enable_animation != blank %} data-aos="fade-up" {% endif %} class="ttcmsbottombanner">
+    <div class="bottombanner-img">
+      <div class="banner_img">
+        
+          {% if section.settings.banner_image != blank %}
+           <img loading="lazy" height="auto" width="1192" src="{{  section.settings.banner_image | img_url: "master" }}" alt="bottom-banner" />
+          {% endif %}
+          <div class="bottombanner-content">
+            <div class="bottombanner-block">
+              {% if section.settings.banner_subtitle != blank %}
+              <div class="bottombanner-subtitle">{{ section.settings.banner_subtitle }}</div>
+              {% endif %}
+              <div class="bottombanner-title">{{ section.settings.banner_title }}</div>
+             <a href="{{ section.settings.banner_link }}">
+              <div class="bottombanner-desc">{{ section.settings.banner_desc }}</div>
+              </a>
+            </div>
+          </div>
+      
+      </div>
+    </div>
+</div>
+<style>.ttcmsbottombanner .banner_img .bottombanner-content .bottombanner-subtitle{color: {{ section.settings.subtitle_color }};}.ttcmsbottombanner .banner_img .bottombanner-content .bottombanner-title{color: {{ section.settings.title_color }};}.ttcmsbottombanner .banner_img .bottombanner-content .bottombanner-desc{color: {{ section.settings.desc_color }};background:{{section.settings.banner_desc_bg}};}</style>
+{% schema %}
+  {
+    "name": "Bottom Banner",
+    "class": "bottom-banner col-sm-9",
+    "settings": [
+	{
+        "type": "color",
+        "id": "title_color",
+        "label": "Title color",
+		"default": "#eb3039"
+      },
+ 		{
+        "type": "color",
+        "id": "subtitle_color",
+        "label": "Subtitle color",
+		"default": "#000"
+      },	
+		{
+        "type": "color",
+        "id": "desc_color",
+        "label": "description color",
+		"default": "#000"
+      },
+	{
+        "type": "color",
+        "id": "banner_desc_bg",
+        "label": "Description Background color",
+		"default": "#f4f3f0"
+      }	,
+      {
+        "type": "image_picker",
+        "id": "banner_image",
+        "label": "Image"
+      },
+        {
+        "type": "url",
+        "id": "banner_link",
+        "label": "Banner link"
+      },
+		 {
+        "type": "color",
+        "id": "banner_bg",
+        "label": "banner background color",
+		"default": "#f4f3f0"
+      },
+	 {
+        "type": "text",
+        "id": "banner_title",
+        "label": "Banner Title",
+		"default": "best ever deals"
+      },
+	 {
+        "type": "text",
+        "id": "banner_subtitle",
+        "label": "Banner Subtitle",
+		"default": "not just a deal"
+      },
+	 {
+        "type": "text",
+        "id": "banner_desc",
+        "label": "banner description",
+		"default": "the biggest ever shopping festival!"
+      }
+	
+    ],
+    "presets": [
+      {
+        "name": "Bottom Banner",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}
