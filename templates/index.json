@@ -37,6 +37,7 @@
         "1540267804198-1": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Heading_1.png",
             "show_video": false,
             "video_url": "",
             "title_color": "#000000",
@@ -62,7 +63,7 @@
       ],
       "custom_css": [
         ".slider-content-wrap {left: 20px; max-width: 200px;}",
-        "@media (min-width: 769px) {.slider-content-wrap {max-width: none; } .slider-subtitle {display: none }}"
+        "@media (min-width: 769px) {.slider-content-wrap {max-width: none; } .slider-subtitle {display: none; }}"
       ],
       "settings": {
         "slider_home_auto": true,
