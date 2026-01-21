@@ -1430,10 +1430,10 @@
           "topbar_service": "",
           "service_url": "#",
           "topbar_service_icon_color": "#839495",
-          "toplink_txt_clr": "#111111",
-          "toplink_bg_clr": "#839495",
+          "toplink_txt_clr": "#ffffff",
+          "toplink_bg_clr": "#000000",
           "toplink_txthover_clr": "#ffffff",
-          "toplink_bghover_clr": "#839495",
+          "toplink_bghover_clr": "#000000",
           "email": "",
           "email_link": "mailto:admin@gmail.com",
           "contact-title": "",
@@ -1447,12 +1447,12 @@
           "display_myaccount": true,
           "nav_menu": "main-menu",
           "menu_bg_color": "#ffffff",
-          "menu_txt_color": "#000000",
+          "menu_txt_color": "#ffffff",
           "tt-title": "Categorias",
-          "tt-title_bgclr": "#839495",
+          "tt-title_bgclr": "#000000",
           "tt-title_clr": "#ffffff",
           "menu_bgclr": "#ffffff",
-          "menu_txt_clr": "#111111"
+          "menu_txt_clr": "#ffffff"
         }
       },
       "product-template-1": {
@@ -2242,7 +2242,7 @@
         ],
         "settings": {
           "foote-toggle": false,
-          "newsletter": true,
+          "newsletter": false,
           "newsletter_bg": "#6453f7",
           "newsletter_txt_color": "#ffffff",
           "btn_txt_color": "#ffffff",
@@ -2269,11 +2269,11 @@
           "col_3_menu": "",
           "contact": true,
           "footer_contact_title": "Store Information",
-          "contact_address": "<p>My Company, 42 Puffin street 12345 Puffinville France</p>",
-          "contact_no": "0123-456-789",
+          "contact_address": "<p>Costa Rica, Alajuela - Tienda Virtual</p>",
+          "contact_no": "",
           "contact_no_url": "tel:0123-456-789",
           "contact_email": "sales@company.com",
-          "services": true,
+          "services": false,
           "title_color": "#000000",
           "title_hover_color": "#000000"
         }
