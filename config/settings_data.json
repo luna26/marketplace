@@ -4529,7 +4529,7 @@
         ],
         "settings": {
           "enable_banner": true,
-          "bg_clr": "#839495",
+          "bg_clr": "#000000",
           "text_clr": "#ffffff"
         }
       }
