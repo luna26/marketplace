@@ -1423,7 +1423,7 @@
           "more_menu_category": "5",
           "more_menu_category1": "7",
           "sticky_header": true,
-          "header_topbar_show": true,
+          "header_topbar_show": false,
           "logo_width": 240,
           "topbar_service": "",
           "service_url": "#",
