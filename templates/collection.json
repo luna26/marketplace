@@ -12,7 +12,7 @@
     "main": {
       "type": "collection",
       "settings": {
-        "enable_sidecategory": false,
+        "enable_sidecategory": true,
         "linkedlist": "main-menu",
         "linkedlist_title": "Categorias",
         "show_filter": true,
@@ -23,7 +23,7 @@
         "best_title": "",
         "bestseller": "",
         "pro_img_width_height": "100x100",
-        "limit": "",
+        "limit": "6",
         "product_rows": true,
         "promo_link": "#",
         "promo_title": ""
