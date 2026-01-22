@@ -146,7 +146,7 @@
         "type_bg": "rgba(0,0,0,0)",
         "title": "Lencería",
         "collection": "elemar",
-        "product_col": "1"
+        "product_col": "2"
       }
     },
     "1548757741464": {
@@ -246,6 +246,7 @@
     },
     "1504872752494": {
       "type": "feature-blogs",
+      "disabled": true,
       "settings": {
         "product_col_desktop_pro": 4,
         "product_col_mobile_pro": 1,
