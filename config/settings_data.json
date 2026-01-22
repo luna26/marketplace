@@ -82,7 +82,7 @@
     "display_color_variant": true,
     "collection_infinite_scroll": true,
     "show_vendor": true,
-    "collection_products_per_row": "4",
+    "collection_products_per_row": "2",
     "collection_page_products": "12",
     "collection_sort_enable": true,
     "collection_sidebar_use": "left_sidebar",
