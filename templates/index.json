@@ -246,6 +246,7 @@
     },
     "1504872752494": {
       "type": "feature-blogs",
+      "disabled": true,
       "settings": {
         "product_col_desktop_pro": 4,
         "product_col_mobile_pro": 1,
