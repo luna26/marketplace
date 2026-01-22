@@ -12,65 +12,25 @@
     "main": {
       "type": "collection",
       "settings": {
-        "enable_sidecategory": true,
+        "enable_sidecategory": false,
         "linkedlist": "main-menu",
         "linkedlist_title": "Categorias",
         "show_filter": true,
-        "collapse_on_larger_devices": false,
+        "collapse_on_larger_devices": true,
         "enable_sorting": true,
         "enable_sidebar_multiple_choice": true,
         "show_best_products": false,
-        "best_title": "",
-        "bestseller": "",
+        "best_title": "test",
+        "bestseller": "elemar",
         "pro_img_width_height": "100x100",
         "limit": "6",
         "product_rows": true,
         "promo_link": "#",
         "promo_title": ""
       }
-    },
-    "product_tab_model_EEEa4L": {
-      "type": "product-tab-model",
-      "blocks": {
-        "text_block_nAx6yT": {
-          "type": "text_block",
-          "settings": {
-            "title": "Tab Name",
-            "collection": "",
-            "btn_title1": "Sell All Product",
-            "category_btn_urls": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_block_nAx6yT"
-      ],
-      "name": "Sortable Products",
-      "settings": {
-        "class": "",
-        "product_rows": true,
-        "product_col_desktop_pro": 6,
-        "product_col_mobile_pro": 1,
-        "type_bg": "#fff",
-        "title_1": "",
-        "title_1_clr": "#000"
-      }
-    },
-    "collections_product_tkkGeF": {
-      "type": "collections-product",
-      "name": "New collection",
-      "settings": {
-        "class": "newproduct",
-        "type_bg": "#fff",
-        "title": "New collection",
-        "collection": "elemar",
-        "product_col": "2"
-      }
     }
   },
   "order": [
-    "main",
-    "product_tab_model_EEEa4L",
-    "collections_product_tkkGeF"
+    "main"
   ]
 }
