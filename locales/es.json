@@ -378,7 +378,8 @@
             "to": "Hasta",
             "from": "Desde",
             "clear_all": "Limpiar",
-            "clear": "Limpiar"
+            "clear": "Limpiar",
+            "filter_button": "Filtrar"
         },
         "general": {
             "from_text_html": "De {{ price }}",
@@ -427,7 +428,7 @@
             "add_cart": "Añadir a la cesta",
             "view_wishlist": "Ver lista de deseos",
             "browse_wishlist": "Navegar por Lista",
-            "add_to_wishlist": "Añadir a la lista de deseos",
+            "add_to_wishlist": "",
             "wishlist_name": "Deseados",
             "wishlist_title": "Ir a la lista de deseos",
             "added_to_wishlist": "Añadido a la lista de deseos",
