@@ -74,7 +74,7 @@
     "collections_show_rating": false,
     "sale_show_percentage": true,
     "collections_view_enable": true,
-    "collections_masonry": false,
+    "collections_masonry": true,
     "enable_quick_view": false,
     "enable_add_cart": true,
     "enable_wishlist": true,
